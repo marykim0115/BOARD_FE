@@ -12,3 +12,7 @@
 - react-helmet-async : head 태그 내부 구성 변경할때 사용
 
     yarn add react-router-dom sass styled-components classnames @loadable/component immer axios i18next react-i18next react-helmet-async
+
+### 초기구성 - src/index.js
+-HelmetProvider
+-BrowserRouter
