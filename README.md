@@ -46,8 +46,8 @@
 
 ## 화면 설계
 
-### 로그인 페이지
+### 메인 페이지
+![main page](https://github.com/marykim0115/BOARD_FE/assets/130652983/7d433804-b5b4-463f-9a79-1951f10a352c)
 
-### 회원가입 페이지
-
-###
+### 메인 페이지 상세 설명
+![explanation](https://github.com/marykim0115/BOARD_FE/assets/130652983/d520683c-a7d7-46af-a6c2-07f011274e42)
