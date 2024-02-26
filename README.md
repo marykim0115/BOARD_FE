@@ -13,11 +13,11 @@
 
 - jsconfig.json
 
-    {
-      "compilerOptions": {
-      "target": "ES6"
-      }
-    }
+  {
+  "compilerOptions": {
+  "target": "ES6"
+  }
+  }
 
 ### 의존성 추가
 
@@ -29,12 +29,18 @@
 - i18next, react-i18next : 메세지, 다국어 처리
 - react-helmet-async : head 태그 내부 구성 변경할때 사용
 - react-icons : 리액트에서 제공하는 아이콘 모음
+- react-cookies :
 
-    yarn add react-router-dom sass styled-components classnames @loadable/component immer axios i18next react-i18next react-helmet-async react-icons
+  yarn add react-router-dom sass styled-components classnames @loadable/component immer axios i18next react-i18next react-helmet-async react-icons
 
-    npm i react-router-dom sass styled-components classnames @loadable/component immer axios i18next react-i18next react-icons
+  npm i react-router-dom sass styled-components classnames @loadable/component immer axios i18next react-i18next react-icons
+
+### 라이브러리
+
+- axios : http를 이용해서 서버와 통신하기 위해 사용하는 패키지
 
 ### 초기구성 - src/index.js
+
 - HelmetProvider
 - BrowserRouter
 
