@@ -4,7 +4,7 @@ import AdminOnlyContainer from '../../commons/containers/AdminOnlyContainer';
 import { Outlet } from 'react-router-dom';
 import Header from '../../outlines/admin/Header';
 import Side from '../../outlines/admin/Side';
-import SubMenu from '../../outlines/admin/SubMenu';
+import SubMenu from '../../outlines/admin/Submenu';
 
 const ContentBox = styled.main`
   display: flex;
