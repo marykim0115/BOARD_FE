@@ -1,14 +1,17 @@
 import axios from 'axios';
+import cookies from 'react-cookies';
 
-export default function apiRequest(url, method = 'GET', data, headers) {
-  /* 
-    /member/join -> http://localhost:3001/api/v1/member/join
-    http://주소/api/... */
-  if (/^http[s]?:/i.test(url)) {
-    url = 'process.env.REACT_APP_API_URL + url';
+export default function apiRequest(url, method = 'GET', data, headers = {}) {
+  // /member/join -> http://localhost:3001/api/v1/member/join
+  // https://주소/api/....
+
+  if (!url || !url.trim()) return;
+
+  if (!/^http[s]?:/i.test(url)) {
+    url = process.env.REACT_APP_API_URL + url;
   }
 
-  //GET방식 -> ?키=값&키=값
+  // GET -> ?키=값&키=값
   method = method.toUpperCase();
   if (method === 'GET' && data) {
     const params = new URLSearchParams(data);
@@ -16,12 +19,16 @@ export default function apiRequest(url, method = 'GET', data, headers) {
     data = null;
   }
 
-  // 검증 실패시 400
+  const token = cookies.load('token');
+  if (token && token.trim()) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
   return axios({
     method,
     url,
     data,
     headers,
-    ValidityState: (state) => state < 500,
+    validateStatus: (state) => state < 500,
   });
 }
